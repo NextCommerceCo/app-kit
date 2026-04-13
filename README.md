@@ -3,9 +3,9 @@
 [![Build Status][GHAction-image]][GHAction-link]
 [![CodeCov][codecov-image]][codecov-link]
 
-# 29 Next App Kit
+# Next Commerce App Kit
 
-App Kit is a cross-platform command line tool to build and maintain apps on the 29 Next platform.
+App Kit is a cross-platform command line tool to build and maintain apps on the Next Commerce platform.
 
 ## Installation
 
@@ -41,11 +41,11 @@ With the package installed, you can now use the commands inside your app directo
 **Available Commands**
 * `nak setup` - configure current directory with an app in your account
 * `nak build` - build new app zip file
-* `nak push` - push latest app zip file to 29 Next platform
+* `nak push` - push latest app zip file to Next Commerce platform
 
 
 #### Setup
-Configures the current directory with necessary data to push the app files to 29 Next.
+Configures the current directory with necessary data to push the app files to Next Commerce.
 
 **Data collected by the `setup` command:**
 * **App Client ID** - retrieve this from the app in your partner account.
@@ -53,16 +53,16 @@ Configures the current directory with necessary data to push the app files to 29
 * **Password** - your password used to access your partner account.
 
 #### Build
-Creates a new version (zip of the current directory files) to prepare your app to be pushed to 29 Next.
+Creates a new version (zip of the current directory files) to prepare your app to be pushed to Next Commerce.
 
 #### Push
-Pushes the latest version to 29 Next and to your development stores to review and test your app.
+Pushes the latest version to Next Commerce and to your development stores to review and test your app.
 
 
-[codecov-image]: https://codecov.io/gh/29next/app-kit/branch/master/graph/badge.svg?token=1QLTNSH72Y
-[codecov-link]: https://codecov.io/gh/29next/app-kit
+[codecov-image]: https://codecov.io/gh/NextCommerceCo/app-kit/branch/master/graph/badge.svg?token=1QLTNSH72Y
+[codecov-link]: https://codecov.io/gh/NextCommerceCo/app-kit
 
 [pypi-v-image]: https://img.shields.io/pypi/v/next-app-kit.svg
 [pypi-v-link]: https://pypi.org/project/next-app-kit/
-[GHAction-image]: https://github.com/29next/app-kit/actions/workflows/test.yml/badge.svg?branch=master
-[GHAction-link]: https://github.com/29next/app-kit/actions?query=event%3Apush+branch%3Amaster
+[GHAction-image]: https://github.com/NextCommerceCo/app-kit/actions/workflows/test.yml/badge.svg?branch=master
+[GHAction-link]: https://github.com/NextCommerceCo/app-kit/actions?query=event%3Apush+branch%3Amaster

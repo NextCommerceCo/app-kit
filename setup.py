@@ -13,9 +13,9 @@ with open('README.md', 'r') as fh:
 
 setup(
     name='next-app-kit',
-    author="29next",
+    author="Next Commerce",
     author_email="dev@29next.com",
-    url='https://github.com/29next/app-kit',
+    url='https://github.com/NextCommerceCo/app-kit',
     long_description=long_description,
     long_description_content_type='text/markdown',
     version=__version__,
