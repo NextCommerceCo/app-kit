@@ -12,5 +12,5 @@ clean: ## Remove files not in source control
 	@ rm -rf dist/*
 
 publish: clean
-	@ python3 setup.py sdist bdist_wheel
+	@ python3 -m build
 	@ twine upload dist/*
