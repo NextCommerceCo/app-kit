@@ -37,7 +37,7 @@ class TestCommand(unittest.TestCase):
     ):
         mock_input.side_effect = [None, None, None]
         self.command.config.client_id = '123456'
-        self.command.config.email = 'test@29next.com'
+        self.command.config.email = 'test@example.com'
         self.command.config.password = 'password'
 
         self.command.setup()
@@ -50,7 +50,7 @@ class TestCommand(unittest.TestCase):
     ):
         mock_input.side_effect = [
             123456,  # client id
-            'test@29next.com',  # email
+            'test@example.com',  # email
             'password'  # password
         ]
         with self.assertLogs(level='INFO') as log:
@@ -154,7 +154,7 @@ class TestCommand(unittest.TestCase):
             True
         ]
         self.command.config.client_id = '123456'
-        self.command.config.email = 'test@29next.com'
+        self.command.config.email = 'test@example.com'
 
         mock_open_file.return_value = file = MagicMock()
         mock_response = self.mock_gateway.return_value.update_app.return_value
@@ -173,7 +173,7 @@ class TestCommand(unittest.TestCase):
         assert log.output == [
             f'INFO:root:{LOG_COLOR.INFO.format(message="Pushing to app with client_id 123456")}',
             f'INFO:root:{LOG_COLOR.INFO.format(message="with filename test1-20200101010101.zip")}',
-            f'INFO:root:{LOG_COLOR.INFO.format(message="by username test@29next.com")}',
+            f'INFO:root:{LOG_COLOR.INFO.format(message="by username test@example.com")}',
             f"INFO:root:{LOG_COLOR.ERROR.format(message='Upload file to server failed. file size limit')}"
         ]
 
@@ -192,7 +192,7 @@ class TestCommand(unittest.TestCase):
             True
         ]
         self.command.config.client_id = '123456'
-        self.command.config.email = 'test@29next.com'
+        self.command.config.email = 'test@example.com'
 
         mock_open_file.return_value = file = MagicMock()
         mock_response = self.mock_gateway.return_value.update_app.return_value
@@ -210,7 +210,7 @@ class TestCommand(unittest.TestCase):
         assert log.output == [
             f'INFO:root:{LOG_COLOR.INFO.format(message="Pushing to app with client_id 123456")}',
             f'INFO:root:{LOG_COLOR.INFO.format(message="with filename test2-20200101010102.zip")}',
-            f'INFO:root:{LOG_COLOR.INFO.format(message="by username test@29next.com")}',
+            f'INFO:root:{LOG_COLOR.INFO.format(message="by username test@example.com")}',
             f"INFO:root:{LOG_COLOR.SUCCESS.format(message='Push update file to app successfully.')}"
         ]
 

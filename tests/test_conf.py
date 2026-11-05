@@ -8,7 +8,7 @@ from nak.settings import LOG_COLOR
 class TestConfig(TestCase):
     def setUp(self):
         self.config = Config()
-        self.config.email = 'test@29next.com'
+        self.config.email = 'test@example.com'
         self.config.password = 'password'
         self.config.client_id = '123456'
 
@@ -26,11 +26,11 @@ class TestConfig(TestCase):
         mock_load_yaml.return_value = expected_config = {
             'client_id': 123456
         }
-        mock_env.side_effect = ['test@29next.com', 'password']
+        mock_env.side_effect = ['test@example.com', 'password']
 
         configs, env = self.config.read_config()
         expected_env = {
-            'email': 'test@29next.com',
+            'email': 'test@example.com',
             'password': 'password'
         }
         assert configs == expected_config
@@ -86,7 +86,7 @@ class TestConfig(TestCase):
         mock_read_config.return_value = {
             'client_id': 123456,
         }, {
-            'email': 'test@29next.com',
+            'email': 'test@example.com',
             'password': 'password',
         }
 
@@ -104,7 +104,7 @@ class TestConfig(TestCase):
                 }, f)
 
             with open('.env') as env:
-                assert env.writelines.mock_calls == [call('email=test@29next.com\npassword=password2')]
+                assert env.writelines.mock_calls == [call('email=test@example.com\npassword=password2')]
 
     ####
     # save

@@ -29,9 +29,10 @@ class Command(object):
         self.config.client_id = input(
             f"App Client ID [{hide_variable(self.config.client_id)}]: ") or self.config.client_id
         self.config.email = input(
-            f"accounts.29next.com Email [{self.config.email}]: ") or self.config.email
+            f"accounts.nextcommerce.com Email [{self.config.email}]: ") or self.config.email
         self.config.password = input(
-            f"accounts.29next.com Password [{hide_variable(self.config.password, True)}]: ") or self.config.password
+            f"accounts.nextcommerce.com Password [{hide_variable(self.config.password, True)}]: "
+        ) or self.config.password
         self.config.save()
 
         logging.info(LOG_COLOR.SUCCESS.format(

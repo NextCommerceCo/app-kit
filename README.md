@@ -33,7 +33,7 @@ pip install next-app-kit --upgrade
 
 > :warning: **Important**
 >
-> Usage requires a Partner Account and an App Client ID, create and setup your partner account [here](https://accounts.29next.com/partners/).
+> Usage requires a Partner Account and an App Client ID, create and set up your partner account [here](https://accounts.nextcommerce.com/partners/).
 
 ## Usage
 With the package installed, you can now use the commands inside your app directory to build and push your app updates.
