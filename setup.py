@@ -20,8 +20,8 @@ setup(
     long_description_content_type='text/markdown',
     version=__version__,
     install_requires=[
-        "PyYAML>=5.4",
-        "requests>=2.25",
+        "PyYAML>=6.0.2",
+        "requests>=2.33.0",
         "python-decouple>=3.6"
     ],
     entry_points={
@@ -30,5 +30,5 @@ setup(
         ],
     },
     packages=find_packages(),
-    python_requires='>=3.6'
+    python_requires='>=3.10'
 )
